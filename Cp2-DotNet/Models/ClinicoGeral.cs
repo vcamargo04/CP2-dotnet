@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cp2_DotNet.Models
@@ -20,9 +19,8 @@ namespace Cp2_DotNet.Models
         [MaxLength(20, ErrorMessage = "O telefone deve conter no máximo 20 caracteres.")]
         public string Telefone { get; set; }
 
-        // Relacionamento 1 pra 1 CRM
-        [ForeignKey("CRM")]
-        public int CRMId { get; set; }
+        // Relacionamento 1 para 1 com a classe CRM
+        public int? CRMId { get; set; }
         public CRM? CRM { get; set; }
     }
 }

@@ -23,8 +23,8 @@ namespace Cp2_DotNet.Models
         public string Telefone { get; set; }
 
         // Relaciomento 1 pra 1 com a classe CRM
-        [ForeignKey("CRM")]
-        public int CRMId { get; set; }
-        public CRM? CRM { get; set; }
+        
+        public int? CRMId { get; set; }
+        public CRM? CRM { get; set; }           
     }
 }

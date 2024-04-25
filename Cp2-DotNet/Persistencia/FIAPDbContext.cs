@@ -13,7 +13,15 @@ namespace Cp2_DotNet.Persistencia
         public DbSet<Cirurgiao> Cirurgioes { get; set; }
         public DbSet<Paciente> Pacientes { get; set; }
         public DbSet<Pediatra> Pediatras { get; set; }
+        public DbSet<CRM> CRMs { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ClinicoGeral>()
+                .HasOne(c => c.CRM)
+                .WithOne()
+                .HasForeignKey<ClinicoGeral>(c => c.CRMId);
+        }
         public FIAPDbContext(DbContextOptions<FIAPDbContext> options) : base(options)
         {
 

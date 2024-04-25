@@ -20,8 +20,8 @@ namespace Cp2_DotNet.Models
         public Paciente? Paciente { get; set; }
 
         // relacionamento da classe clinicoGeral
-        [ForeignKey("ClinicoGeral")]
-        public int? ClinicoGeralId { get; set; }
-        public ClinicoGeral? ClinicoGeral { get; set; }
+        
+        public int ClinicoGeralId { get; set; }
+        public ClinicoGeral ClinicoGeral { get; set; }
     }
 }

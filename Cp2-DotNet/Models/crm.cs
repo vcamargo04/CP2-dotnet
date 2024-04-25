@@ -17,11 +17,11 @@ namespace   Cp2_DotNet.Models
         // relacionamento 1 pra 1 com a classe do cirurgiao
         [ForeignKey("Cirurgiao")]
         public int CirurgiaoId { get; set; }
-        public Cirurgiao Cirurgiao { get; set; }
+        public Cirurgiao? Cirurgiao { get; set; }
 
         // relacionamento 1 pra 1 com a classe pediatra
         [ForeignKey("Pediatra")]
         public int PediatraId { get; set; }
-        public Pediatra Pediatra { get; set; }
+        public Pediatra? Pediatra { get; set; }
     }
 }

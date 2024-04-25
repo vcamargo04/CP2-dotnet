@@ -1,10 +1,10 @@
-﻿
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cp2_DotNet.Models
 {
-    [Table("Pacientes")]
+    [Table("tb_pacientes")]
     public class Paciente
     {
         [Key]
@@ -21,6 +21,9 @@ namespace Cp2_DotNet.Models
 
         [MaxLength(11, ErrorMessage = "O CPF deve conter no máximo 11 caracteres.")]
         public string CPF { get; set; }
+
+        [EmailAddress(ErrorMessage = "O email inserido não é válido.")]
+        public string Email { get; set; }
 
         // relacionamento 1 pra N com a classe consulta
         public ICollection<Consulta> Consultas { get; set; }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cp2_DotNet.Models
 {
-    [Table("COREN")]
+    [Table("tb_coren")]
     public class COREN
     {
         [Key]
@@ -15,6 +15,6 @@ namespace Cp2_DotNet.Models
         public string Numero { get; set; }
 
         // relacionamento com a classe 1 pra N com a classe enfermeiro
-        public ICollection<Enfermeiro> Enfermeiros { get; set; }
+        public ICollection<Enfermeiro>? Enfermeiros { get; set; }
     }
 }
